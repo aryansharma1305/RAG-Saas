@@ -27,6 +27,12 @@ ollama pull gemma3:1b
 ollama pull glm4:9b
 ```
 
+On Windows, after Ollama is installed and available in a new PowerShell window, you can pull the models configured in `.env` with:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\pull_ollama_models.ps1
+```
+
 If `glm4:9b` is too heavy, keep the config and use Qwen/Gemma first. You can change `QWEN_MODEL`, `GEMMA_MODEL`, and `GLM_MODEL` in `.env` when you have a different local model name available.
 
 ## Start API
