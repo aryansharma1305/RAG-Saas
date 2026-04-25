@@ -1,0 +1,14 @@
+[
+  {
+    "question": "What does the policy say about refunds?",
+    "expected_keywords": ["refund", "seven days", "1000 document pages"]
+  },
+  {
+    "question": "When are support tickets handled?",
+    "expected_keywords": ["Monday through Friday", "9 AM", "6 PM"]
+  },
+  {
+    "question": "What can enterprise customers request?",
+    "expected_keywords": ["enterprise", "private deployment", "infrastructure"]
+  }
+]

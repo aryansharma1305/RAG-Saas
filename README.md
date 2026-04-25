@@ -95,12 +95,23 @@ Each chat/query chooses one or more `kb_ids`. Retrieval only runs against those 
 
 ## Model Configuration
 
-Edit `app/config.py` to change the local model names:
+Edit `.env` to change the local model names:
 
-```python
-qwen = "qwen2.5:3b"
-gemma = "gemma3:1b"
-glm = "glm4:9b"
+```env
+DEFAULT_MODEL_KEY=gemma
+QWEN_MODEL=qwen3:8b
+GEMMA_MODEL=gemma3:4b
+GLM_MODEL=glm4:9b
 ```
 
 The RAG code does not depend on one specific model, so benchmarking can reuse the same pipeline later.
+
+## Benchmark RAG Models
+
+After ingesting at least one document, benchmark all configured model keys against an evaluation file:
+
+```bash
+python scripts/benchmark_rag.py --workspace-id workspace_demo --kb-id YOUR_KB_ID --output results/benchmark.json
+```
+
+If `--kb-id` is omitted, the script uses the latest knowledge base for the workspace. The default evaluation file is `data/sample_eval_questions.json`; replace it with questions and expected keywords from your own documents for a more meaningful score.

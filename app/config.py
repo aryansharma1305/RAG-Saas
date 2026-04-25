@@ -19,9 +19,9 @@ class Settings(BaseSettings):
     embedding_dimension: int = Field(default=384, alias="EMBEDDING_DIMENSION")
 
     ollama_base_url: str = Field(default="http://localhost:11434", alias="OLLAMA_BASE_URL")
-    default_model_key: str = Field(default="qwen", alias="DEFAULT_MODEL_KEY")
-    qwen_model: str = Field(default="qwen2.5:3b", alias="QWEN_MODEL")
-    gemma_model: str = Field(default="gemma3:1b", alias="GEMMA_MODEL")
+    default_model_key: str = Field(default="gemma", alias="DEFAULT_MODEL_KEY")
+    qwen_model: str = Field(default="qwen3:8b", alias="QWEN_MODEL")
+    gemma_model: str = Field(default="gemma3:4b", alias="GEMMA_MODEL")
     glm_model: str = Field(default="glm4:9b", alias="GLM_MODEL")
 
     app_database_url: str = Field(default="sqlite:///data/rag.db", alias="APP_DATABASE_URL")

@@ -42,8 +42,8 @@ if (-not $ollamaCommand) {
 
 if ($Models.Count -eq 0) {
     $Models = @(
-        Read-DotEnvValue -Path $EnvPath -Name "QWEN_MODEL" -Default "qwen2.5:3b"
-        Read-DotEnvValue -Path $EnvPath -Name "GEMMA_MODEL" -Default "gemma3:1b"
+        Read-DotEnvValue -Path $EnvPath -Name "QWEN_MODEL" -Default "qwen3:8b"
+        Read-DotEnvValue -Path $EnvPath -Name "GEMMA_MODEL" -Default "gemma3:4b"
         Read-DotEnvValue -Path $EnvPath -Name "GLM_MODEL" -Default "glm4:9b"
     )
 }
