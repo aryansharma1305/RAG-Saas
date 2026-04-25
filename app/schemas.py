@@ -26,6 +26,20 @@ class IngestResponse(BaseModel):
     source: str
 
 
+class DocumentOut(BaseModel):
+    document_id: str
+    workspace_id: str
+    kb_id: str
+    source: str
+    chunks_indexed: int
+    created_at: str
+
+
+class DeleteDocumentResponse(BaseModel):
+    document_id: str
+    deleted_chunks: int
+
+
 class QueryRequest(BaseModel):
     workspace_id: str
     kb_ids: list[str] = Field(min_length=1)

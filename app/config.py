@@ -15,8 +15,15 @@ class Settings(BaseSettings):
     llama_cloud_api_key: str = Field(default="", alias="LLAMA_CLOUD_API_KEY")
     use_llama_parse: bool = Field(default=False, alias="USE_LLAMA_PARSE")
 
+    auth_enabled: bool = Field(default=False, alias="AUTH_ENABLED")
+    app_api_key: str = Field(default="", alias="APP_API_KEY")
+    default_user_id: str = Field(default="local_user", alias="DEFAULT_USER_ID")
+
     embedding_model: str = Field(default="BAAI/bge-small-en-v1.5", alias="EMBEDDING_MODEL")
     embedding_dimension: int = Field(default=384, alias="EMBEDDING_DIMENSION")
+    reranking_enabled: bool = Field(default=False, alias="RERANKING_ENABLED")
+    reranker_model: str = Field(default="cross-encoder/ms-marco-MiniLM-L-6-v2", alias="RERANKER_MODEL")
+    rerank_top_n: int = Field(default=5, alias="RERANK_TOP_N")
 
     ollama_base_url: str = Field(default="http://localhost:11434", alias="OLLAMA_BASE_URL")
     default_model_key: str = Field(default="gemma", alias="DEFAULT_MODEL_KEY")

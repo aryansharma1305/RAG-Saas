@@ -45,6 +45,12 @@ class PineconeStore:
         if vectors:
             self.index.upsert(vectors=vectors)
 
+    def delete_document(self, document_id: str, chunks_indexed: int) -> None:
+        if chunks_indexed <= 0:
+            return
+        ids = [f"{document_id}_{idx}" for idx in range(chunks_indexed)]
+        self.index.delete(ids=ids)
+
     def query(
         self,
         vector: list[float],

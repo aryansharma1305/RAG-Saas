@@ -7,6 +7,7 @@ from app.ingestion.ingest import IngestionService
 from app.ingestion.parser import DocumentParser
 from app.pinecone_store import PineconeStore
 from app.rag_chain import RagChain
+from app.reranking import get_reranker
 from app.retrieval import Retriever
 from app.storage.metadata_store import MetadataStore
 
@@ -47,6 +48,7 @@ def get_retriever() -> Retriever:
     return Retriever(
         embeddings=get_embedding_service(),
         pinecone=get_pinecone_store(),
+        reranker=get_reranker(),
     )
 
 

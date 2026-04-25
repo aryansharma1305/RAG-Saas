@@ -124,7 +124,7 @@ def print_summary(results: list[dict]) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Benchmark configured RAG models against an evaluation set.")
-    parser.add_argument("--workspace-id", default="workspace_demo")
+    parser.add_argument("--workspace-id", default="workspace_acme")
     parser.add_argument("--kb-id", action="append", default=None)
     parser.add_argument("--questions", type=Path, default=Path("data/sample_eval_questions.json"))
     parser.add_argument("--model-key", action="append", choices=["qwen", "gemma", "glm"])
