@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic-settings
+python-dotenv
+pinecone
+sentence-transformers
+llama-index-core
+llama-index-readers-file
+llama-parse
+ollama
+httpx
+beautifulsoup4
+pandas
+pypdf
+python-docx

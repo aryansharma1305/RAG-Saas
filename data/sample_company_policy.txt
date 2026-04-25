@@ -1,0 +1,7 @@
+Acme Support Policy
+
+Customers can request a refund within seven days of purchase if the account has not consumed more than 1000 document pages.
+
+Enterprise customers may request private deployment when their documents cannot leave their infrastructure.
+
+Support tickets are handled Monday through Friday, from 9 AM to 6 PM.

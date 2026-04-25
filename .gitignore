@@ -1,0 +1,10 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+data/uploads/*
+!data/uploads/.gitkeep
+data/rag.db
+results/
